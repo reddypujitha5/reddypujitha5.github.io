@@ -1,0 +1,673 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+  
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- modernizr J
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+    .for-pb
+    {
+        padding-bottom:20px;
+    }
+
+.range-slider {
+  margin: 15px 0 0 0%;
+}
+
+.range-slider {
+  width: 100%;
+}
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: calc(100% - (73px));
+  height: 10px;
+  border-radius: 5px;
+  background: #d7dcdf;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.range-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #006DF0;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+.range-slider__range::-webkit-slider-thumb:hover {
+  background: #1abc9c;
+}
+.range-slider__range:active::-webkit-slider-thumb {
+  background: #1abc9c;
+}
+.range-slider__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: #006DF0;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+.range-slider__range::-moz-range-thumb:hover {
+  background: #1abc9c;
+}
+.range-slider__range:active::-moz-range-thumb {
+  background: #1abc9c;
+}
+.range-slider__range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+}
+
+
+
+::-moz-range-track {
+  background: #d7dcdf;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}
+
+
+.ProgressBar {
+  margin: 0 auto;
+  padding: 2em 0 3em;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProgressBar-step {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.ProgressBar-step:before, .ProgressBar-step:after {
+  content: "";
+  height: 0.5em;
+  background-color: #9F9FA3;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: -50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: all .25s ease-out;
+}
+.ProgressBar-step:first-child:before, .ProgressBar-step:first-child:after {
+  display: none;
+}
+.ProgressBar-step:after {
+  background-color: #006DF0;
+  width: 0%;
+}
+.ProgressBar-step.is-complete + .ProgressBar-step.is-current:after, .ProgressBar-step.is-complete + .ProgressBar-step.is-complete:after {
+  width: 100%;
+}
+
+.ProgressBar-icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #9F9FA3;
+  fill: #9F9FA3;
+  border-radius: 50%;
+  padding: 0.38em;
+  max-width: 100%;
+  z-index: 10;
+  position: relative;
+  transition: all .25s ease-out;
+}
+.is-current .ProgressBar-icon {
+  fill: #006DF0;
+  background-color: #006DF0;
+}
+.is-complete .ProgressBar-icon {
+  fill: #DBF1FF;
+  background-color: #006DF0;
+}
+
+.ProgressBar-stepLabel {
+  display: block;
+  text-transform: uppercase;
+  color: #9F9FA3;
+  position: absolute;
+  padding-top: 0.5em;
+  width: 100%;
+  transition: all .25s ease-out;
+}
+.is-current > .ProgressBar-stepLabel, .is-complete > .ProgressBar-stepLabel {
+  color: #006DF0;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 4em auto;
+  font-size: 16px;
+}
+
+
+.btn-primary {
+      background-color: #4C84FF;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    font-size: 20px;
+    border-color: #4C84FF;
+    width: 80%;
+
+}
+.btn-primary:hover {
+   background-color: #4C84FF;
+   border-color:  #4C84FF;
+}
+.slider-handle {
+   background-color: #4C84FF !important;
+}
+
+    </style>
+</head>
+
+<bodydata-gr-c-s-loaded="true" class="mini-navbar">
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+    <!-- Start Left menu area -->
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+               <i class="fa fa-align-left fa-icon-main" aria-hidden="true"></i>
+
+            </div>
+            <div class="left-custom-menu-adp-wrap comment-scrollbar mCustomScrollbar _mCS_1 mCS-autoHide" style="position: relative; overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-light-1 mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="">
+                            <a  href="#">
+                   <i class="educate-icon educate-message" aria-hidden="true"></i>
+
+                   <span class="mini-click-non"></span>
+                </a>
+                        </li>
+                        <li class="active-sidebar-li">
+                            <a title="Landing Page" href="#" aria-expanded="false">
+                              <i class="educate-icon educate-bell active-sidebar" aria-hidden="true"></i>
+</span> <span class="mini-click-non"></span></a>
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="false">.
+                              <i class="educate-icon educate-bell" aria-hidden="true"></i>
+
+                             <span class="mini-click-non"></span></a>
+                        </li>
+
+
+                       
+                    </ul>
+                </nav>
+            </div></div></div>
+        </nav>
+    </div>
+    <!-- End Left menu area -->
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                    </div>
+                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n">
+                                            <ul class="nav navbar-nav mai-top-nav">
+                                                <li class="nav-item">
+                                                  <a href="#" class="nav-link box">CA</a>
+                                                </li>
+                                                <li class="nav-item"><a href="#" class="nav-link">New House</a>
+                                                </li>
+                                                <li class="nav-item"><a href="#" class="nav-link">
+                                                  <i class="fa fa-th fa-icon" aria-hidden="true"></i>
+                                                </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                                                    <div role="menu" class="notification-author dropdown-menu animated zoomIn">
+                                                        <div class="notification-single-top">
+                                                            <h1>Notifications</h1>
+                                                        </div>
+                                                        <ul class="notification-menu mCustomScrollbar _mCS_2 mCS-autoHide mCS_no_scrollbar" style="position: relative; overflow: visible;"><div id="mCSB_2" class="mCustomScrollBox mCS-light-1 mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 230px;"><div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Advanda Cro</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="fa fa-cloud edu-cloud-computing-down" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Sulaiman din</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="fa fa-eraser edu-shield" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Victor Jara</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="fa fa-line-chart edu-analytics-arrow" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Victor Jara</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </div></div><div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-light-1 mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></ul>
+                                                        <div class="notification-view">
+                                                            <a href="#">View All Notification</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                              <img src="img/product/pro4.jpg" alt="">
+                              <span class="admin-name">Prof.Anderson</span>
+                              <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+                            </a>
+                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                        <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-money author-log-ic"></span>User Billing</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu end -->
+             <div class="breadcome-area">
+                <div class="container-fluid"><br>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="">
+                                           <!-- <h5>No user risk score yet</h5> -->
+                                           <h4 style="padding: 34px;">Simulation</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                       <ol class="ProgressBar">
+  <li class="ProgressBar-step">
+    <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+   <!-- <span class="ProgressBar-stepLabel">Potatoes</span> -->
+  </li>
+  <li class="ProgressBar-step">
+    <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+   <!-- <span class="ProgressBar-stepLabel">Potatoes</span> -->
+  </li>
+  <li class="ProgressBar-step">
+    <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+   <!-- <span class="ProgressBar-stepLabel">Potatoes</span> -->
+  </li>
+  <li class="ProgressBar-step">
+    <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+   <!-- <span class="ProgressBar-stepLabel">Potatoes</span> -->
+  </li>
+  <li class="ProgressBar-step">
+    <svg class="ProgressBar-icon"><use xlink:href="#checkmark-bold"/></svg>
+   <!-- <span class="ProgressBar-stepLabel">Potatoes</span> -->
+  </li>
+</ol>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="position: fixed;top: -50%;">
+  <symbol id="checkmark-bold" viewBox="0 0 24 24">
+    <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+  </symbol>
+</svg>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <button onclick="this.blur()" id="advance"  type="button" class="btn btn-md btn-custon-rounded-three btn-primary">Continue<i class="far fa-arrow-alt-circle-right" style="font-size:30px;padding: 0px 0px 0px 12px;"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div> 
+            
+        </div>
+        <div class="analytics-sparkle-area">
+            <div class="container-fluid">
+
+            </div>
+        </div>
+        <div class="product-sales-area mg-tb-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                       <div class="white-box">
+                            <ul class="country-state">
+                                <li class="">
+                                     <small><b>Target</b></small>
+                                    <div class="range-slider">
+  <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="-30" data-slider-max="120" data-slider-step="1" data-slider-value="14"/>
+  
+</div> 
+                                </li>
+                                <li class="">
+                                     <small><b>Target</b></small>
+                                    <div class="range-slider">
+  <input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="320" data-slider-step="1" data-slider-value="114"/>
+  
+</div> 
+                                </li>
+                                <li class="">
+                                     <small><b>Target</b></small>
+                                    <div class="range-slider">
+  <input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="10" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+  
+</div> 
+                                </li>
+                                <li class="for-pb">
+                                     <small><b>Period</b></small>
+                                    <div class="pull-right">7 Years</div>
+                                </li>
+                                <li class="for-pb">
+                                    <button type="button" class=" disabled btn btn-custon-rounded-four btn-default">Cancel</button>
+                                    <button type="button" class=" pull-right btn btn-custon-rounded-four btn-default">Default</button>
+                                </li>
+                            </ul>
+                        </div>
+                      
+                    </div>
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-sales-chart">
+                            <div class="portlet-title">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                        <div class="caption pro-sl-hd">
+                                            <span class="caption-subject"><b>Performance</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <div class="actions graph-rp graph-rp-dl">
+                                            <p class="pull-left">History</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <div id="morris-bar-chart" style="height: 320px;"></div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <ul class="country-state">
+                                <li>
+                                    <div class="analysis-progrebar-content">
+                                        <div class="m-t-sm small">
+                                            <p>Average Performance</p> <b class="pull-right">20y</b>
+                                        </div>
+                                        <h1 class="text-primary">+<span class="counter ">90.3</span>%</h1>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="analysis-progrebar-content">
+                                        <div class="m-t-sm small">
+                                            <p>Average Performance</p> <b class="pull-right">20y</b>
+                                        </div>
+                                        <h1 class="text-primary">+<span class="counter ">90.3</span>%</h1>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="analysis-progrebar-content">
+                                        <div class="m-t-sm small">
+                                            <p>Average Performance</p> <b class="pull-right">2006</b>
+                                        </div>
+                                        <h1 class="text-danger">+<span class="counter ">20.3</span>%</h1>
+                                    </div>
+                                </li>
+                                <li class="for-pb">
+                                     <small><b>Target</b></small>
+                                    <div class="pull-right">$10,000</div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:25%;"> <span class="sr-only">25% Complete</span></div>
+                                    </div>
+                                </li>
+                                 <li class="for-pb">
+                                    <center><button type="button" class=" btn btn-custon-rounded-four btn-default">View More</button>/<center>
+                                </li>
+                            </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+
+    </div>
+
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- counterup JS
+		============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="js/morrisjs/raphael-min.js"></script>
+    <script src="js/morrisjs/morris.js"></script>
+    <script src="js/morrisjs/home3-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <!-- calendar JS
+		============================================ -->
+
+    <script src="js/bootstrap-slider.min.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+    <!-- tawk chat JS
+		============================================ 
+    <script src="js/tawk-chat.js"></script>       -->
+    <script>
+var slider = new Slider('#ex1', {
+	formatter: function(value) {
+		return ' ' + value;
+	}
+});
+var slider2 = new Slider('#ex2', {
+	formatter: function(value) {
+		return ' ' + value;
+	}
+});
+var slider3 = new Slider('#ex3', {
+	formatter: function(value) {
+		return ' ' + value;
+	}
+});
+
+
+
+
+$("#advance").on("click", function() {
+  var $bar = $(".ProgressBar");
+  if ($bar.children(".is-current").length > 0) {
+    $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+  } else {
+    $bar.children().first().addClass("is-current");
+  }
+});
+
+$("#previous").on("click", function() {
+  var $bar = $(".ProgressBar");
+  if ($bar.children(".is-current").length > 0) {
+    $bar.children(".is-current").removeClass("is-current").prev().removeClass("is-complete").addClass("is-current");
+  } else {
+    $bar.children(".is-complete").last().removeClass("is-complete").addClass("is-current");
+  }
+});
+</script>
+</body>
+
+</html>
